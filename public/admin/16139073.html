@@ -1,0 +1,12 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+</head>
+<body class="has-navbar">
+    <div id="app"><p>把一个文件夹下所有文件删除<br>public static void DelectDir(string srcPath)<br>{<br>    try<br>    {<br>	if(Directory.Exists(srcPath))<br>{<br>	DirectoryInfo dir = new DirectoryInfo(srcPath);<br>         FileSystemInfo[] fileinfo = dir.GetFileSystemInfos();  //返回目录中所有文件和子目录<br>         foreach (FileSystemInfo i in fileinfo)<br>         {<br>             if (i is DirectoryInfo)            //判断是否文件夹<br>             {<br>                  DirectoryInfo subdir = new DirectoryInfo(i.FullName);<br>                  subdir.Delete(true);          //删除子目录和文件<br>             } <br>             else<br>             {<br>                  File.Delete(i.FullName);      //删除指定文件<br>             }<br>         }        <br>	}             <br>    }<br>    catch (Exception e)<br>    {<br>         throw;<br>    }<br>}<img src="dmin\img\aa.png" data-href="%07dmin%5Cimg%5Caa.png" style="max-width: 100%;"><img src="\admin\img\aa.png" data-href="%5Cadmin%5Cimg%5Caa.png" style="max-width: 100%;"><br></p>    </div>
+</body>
+</html>

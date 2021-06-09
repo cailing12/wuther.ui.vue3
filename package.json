@@ -17,6 +17,7 @@
     "less": "^4.1.0",
     "less-loader": "^7.3.0",
     "mockjs": "^1.1.0",
+    "oidc-client": "^1.11.5",
     "remixicon": "^2.5.0",
     "vue": "^3.0.5",
     "vue-axios": "^3.2.2",
